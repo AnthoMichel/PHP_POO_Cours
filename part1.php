@@ -66,35 +66,48 @@
 // echo "Sport: $ballonRugby->sport <br> Marque : $ballonRugby->marque";
 
 //-------V2--------
-class Ballon {
-    public $marque;
-    public $sport;
+// class Ballon {
+//     public $marque;
+//     public $sport;
 
-    function lancer($distance) {
-        echo "Vous avez lancé le ballon à " .$distance ." m ! <br>";
+//     function lancer($distance) {
+//         echo "Vous avez lancé le ballon à " .$distance ." m ! <br>";
+//     }
+
+// };
+
+// //------------Ballon de foot---------------
+// $ballonFoot = new Ballon();
+// $ballonFoot->marque = "Nike";
+// $ballonFoot->sport = "footBall";
+//  //-----------Ballon de Rugby-----------------
+//  $ballonRugby =new Ballon();
+// $ballonRugby->marque = "Gilbert TM";
+// $ballonRugby->sport = "Rugby";
+
+
+
+// // // ------------------ACTION sur les objets--------------
+
+// echo "Sport: $ballonFoot->sport <br> Marque: $ballonFoot->marque";
+// echo "<br>";
+// $ballonFoot->lancer(50);
+
+// echo "<br><br><hr>";
+
+// echo "Sport: $ballonRugby->sport <br> Marque : $ballonRugby->marque";
+// echo "<br>";
+// $ballonRugby->lancer(50);
+
+//------------
+
+class User {
+
+    public $nom;
+    public $age;
+
+    function tchater($message){
+        echo " - " . $message . "<br>";
     }
 
-};
-
-//------------Ballon de foot---------------
-$ballonFoot = new Ballon();
-$ballonFoot->marque = "Nike";
-$ballonFoot->sport = "footBall";
- //-----------Ballon de Rugby-----------------
- $ballonRugby =new Ballon();
-$ballonRugby->marque = "Gilbert TM";
-$ballonRugby->sport = "Rugby";
-
-
-
-// // ------------------ACTION sur les objets--------------
-
-echo "Sport: $ballonFoot->sport <br> Marque: $ballonFoot->marque";
-echo "<br>";
-$ballonFoot->lancer(50);
-
-echo "<br><br><hr>";
-
-echo "Sport: $ballonRugby->sport <br> Marque : $ballonRugby->marque";
-echo "<br>";
-$ballonRugby->lancer(50);
+}
