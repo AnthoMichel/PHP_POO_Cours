@@ -99,15 +99,50 @@
 // echo "<br>";
 // $ballonRugby->lancer(50);
 
-//------------
+//-------------------CLASS USER V0-----
 
-class User {
+// class User {
 
-    public $nom;
-    public $age;
+//     public $nom;
+//     public $age;
 
-    function tchater($message){
-        echo " - " . $message . "<br>";
+//     function tchater($message){
+//         echo "<p> - $message</p><br>";
+//     }
+
+// }
+
+// $michel = new user ();
+
+// $michel->name = "Michel";
+// $michel->age = 49;
+
+// $michel->tchater("$michel->name : Salut Salut !");
+
+class car {
+
+    public $marque;
+    public $proprietaire;
+
+    function demarer(){
+        echo $this->proprietaire." a demaré sa ".$this->marque ."<br>";
     }
+};
 
-}
+$a = new car();
+
+$a->marque = "ford";
+$a->proprietaire= "Sam";
+
+$a->demarer(); 
+$b = new car();
+
+$b->marque = "Toyota";
+$b->proprietaire= "Jack";
+
+$b->demarer(); 
+
+
+
+
+
