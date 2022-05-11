@@ -142,6 +142,36 @@ $b->proprietaire= "Jack";
 
 $b->demarer(); 
 
+class tauxDimposition
+{
+
+    public $client = null;
+    public $CA;
+    public $tauxUrssaf = 0.22;
+    public $tauxImpot = 0.017;
+
+
+    function calcule($CA)
+    {
+        $u = $CA * $this->tauxUrssaf;
+        $i = $CA * $this->tauxImpot;
+        $r = $CA - ($u + $i);
+        echo "Bonjour $this->client , <br> Pour un chiffre d'affaire de $CA vous devais payer $u € d'urssaf et $i € d'impots. <br> Il vous restera $r €";
+    }
+}
+
+
+
+if (!empty($_GET["prenom"] && $_GET["CA"])) {
+
+    $soufiane = new tauxDimposition();
+    $soufiane->client = $_GET["prenom"];
+    $soufiane->calcule($_GET["CA"]);
+}else{
+    echo 'inserer vos données';
+}
+
+
 
 
 
