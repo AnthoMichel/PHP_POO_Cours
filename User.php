@@ -56,5 +56,21 @@ $ds = new database;
 $ds->statusBDD();
 $ds->fletchAll();
 
-var_dump($ds->appart);
 
+class Chicken {
+    public $name;
+    function __construct() {
+        echo "<p>Objet construit</p>";
+    }
+    function __destruct() {
+        echo "<p>Objet destruit $this->name</p>";
+    }
+}
+
+
+$nugget = new Chicken();
+$nugget->name="nuggets1";
+$nugget = new Chicken();
+$nugget->name="nuggets2";
+
+// unset($nugget);
